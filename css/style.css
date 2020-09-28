@@ -6,8 +6,14 @@
 .mt-50{
   margin-top: 50px;
 }
+
 .mb-50{
   margin-bottom: 50px;
+}
+
+.padd-top-bot-90{
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 /* HEADER */
@@ -24,4 +30,42 @@
 
 .box-hero{
   height: 600px;
+}
+
+/* PORTFOLIO */
+
+[class*="box-port-"] {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 290px;
+  border-radius: 5px;
+  background: pink;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px){
+  [class*="box-port-"]{
+    width: 100%;
+    height: 225px;
+  }
+  
+  .box-port-5,
+  .box-port-6{
+    margin-bottom: 0;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px){
+  [class*="box-port-"]{
+    width: 100%;
+    height: 240px;
+  }
+
+  .box-port-4,
+  .box-port-5,
+  .box-port-6{
+    margin-bottom: 0;
+  }
 }
