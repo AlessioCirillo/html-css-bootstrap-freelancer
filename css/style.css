@@ -1,0 +1,27 @@
+/* UTILITIES */
+.division{
+  border: 1px solid black;
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+
+/* HEADER */
+.header{
+  height: 100px;
+  background: #2c3e50;
+}
+
+/* HERO */
+.hero{
+  height: 700px;
+  background: #1abc9c;
+}
+
+.box-hero{
+  height: 600px;
+}
