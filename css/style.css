@@ -4,6 +4,11 @@ body{
 }
 
 /* UTILITIES */
+.container{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 h1,
 h2,
 h4{
@@ -35,6 +40,9 @@ p{
   margin-bottom: 20px;
 }
 
+.mb-10{
+  margin-bottom: 10px;
+}
 .padd-top-bot-90{
   padding-top: 90px;
   padding-bottom: 90px;
@@ -63,6 +71,23 @@ p{
   display: inline-block;
   font-size: 30px;
   margin: 0 15px;
+}
+
+.btn{
+  padding: 15px;
+  font-size: 20px;
+  background: #1abc9c;
+  border: 2px solid #fff;
+}
+
+.btn i{
+  margin-right: 10px;
+}
+
+.btn:hover{
+  background: #fff;
+  border: 1px solid #fff;
+  color: #212529;
 }
 
 /* HEADER */
@@ -122,11 +147,10 @@ p{
 [class*="box-port-"] {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  max-width: 400px;
+  width: 400px;
+  max-width: 100%;
   height: 290px;
   border-radius: 5px;
-  background: pink;
 }
 
 .portfolio{
@@ -139,15 +163,31 @@ p{
 
 [class*="box-port-"] img{
   width: 100%;
+  object-fit: cover;
   height: 100%;
 }
 /* ABOUT */
+.about p{
+  font-size: 20px;
+}
 
-
+.about .col-md-4 p{
+  padding: 0 10px;
+  text-align: left;
+}
 
 /* CONTACT */
 .contact{
-  height: 300px;
+  color: #2c3e50;
+}
+
+.contact .division .div-line{
+  background: #2c3e50;
+}
+
+.form-group{
+  box-shadow: none;
+  border: none;
 }
 
 /* FOOTER */
@@ -177,6 +217,10 @@ p{
 
   .hero .box-hero p{
     font-size: 28px;
+  }
+
+  .container h2{
+    font-size: 48px;
   }
 }
 
