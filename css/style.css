@@ -1,6 +1,19 @@
+body{
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
 /* UTILITIES */
-.division{
-  border: 1px solid black;
+h1,
+h2,
+h4{
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+p{
+  font-size: 20px;
 }
 
 .background-acqua{
@@ -27,18 +40,77 @@
   background: #2c3e50;
 }
 
+.division{
+  margin: 25px 0;
+  display: inline-block;
+}
+
+.div-line{
+  margin-bottom: 10px;
+  height: 5px;
+  width: 110px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.div-star{
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 15px;
+}
+
 /* HEADER */
-.header{
+.navbar-default{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background: #2c3e50;
+  border-radius: 0;
+  border: none;
+  height:100px;
+  line-height: 100px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand{
   height: 100px;
+  line-height: 100px;
+  padding: 0 15px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: inherit;
+}
+
+.navbar-default .navbar-nav > li > a{
+  height: 100px;
+  line-height: 100px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: #1abc9c;
+}
+.navbar-toggle{
+  margin-top: 33px;
 }
 
 /* HERO */
-.hero{
-  height: 700px;
+.box-hero img{
+  height: 250px;
 }
 
-.box-hero{
-  height: 600px;
+.hero .box-hero h1{
+  font-size: 64px;
+}
+
+.hero .box-hero p{
+  font-size: 24px;
 }
 
 /* PORTFOLIO */
