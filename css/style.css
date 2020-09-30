@@ -1,9 +1,10 @@
 body{
   font-family: 'Lato', sans-serif;
   color: #fff;
+  padding-top: 80px;
 }
 
-/* UTILITIES */
+/********** UTILITIES ************/
 .container{
   padding-left: 24px;
   padding-right: 24px;
@@ -15,6 +16,10 @@ h4{
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+}
+
+h4{
+  font-size: 24px;
 }
 
 .container h2{
@@ -32,8 +37,8 @@ p{
   margin-top: 50px;
 }
 
-.mb-50{
-  margin-bottom: 50px;
+.mb-30{
+  margin-bottom: 30px;
 }
 
 .mb-20{
@@ -43,9 +48,9 @@ p{
 .mb-10{
   margin-bottom: 10px;
 }
-.padd-top-bot-90{
-  padding-top: 90px;
-  padding-bottom: 90px;
+.padd-top-bot{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .background-dark{
@@ -53,23 +58,27 @@ p{
 }
 
 .division{
-  margin: 25px 0;
-  display: block;
+  margin: 25px auto;
+  width: 300px;
   max-width: 100%;
+  text-align: center;
 }
 
-.div-line{
-  margin-bottom: 10px;
-  height: 5px;
-  width: 110px;
-  background: #fff;
+.division::before,
+.division::after{
+  content: '';
+  width: 30%;
+  height: 4px;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 3px;
+  background: #fff;
 }
 
-.div-star{
+.division i {
   display: inline-block;
   font-size: 30px;
+  width: 20%;
+  vertical-align: middle;
   margin: 0 15px;
 }
 
@@ -86,26 +95,26 @@ p{
 
 .btn:hover{
   background: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   color: #212529;
 }
 
-/* HEADER */
+/************ HEADER ************/
 .navbar-default{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   background: #2c3e50;
   border-radius: 0;
   border: none;
-  height:100px;
-  line-height: 100px;
+  height:80px;
+  line-height: 80px;
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
 .navbar-default .navbar-brand{
-  height: 100px;
-  line-height: 100px;
+  height: 80px;
+  line-height: 80px;
   padding: 0 15px;
   font-size: 20px;
   color: #fff;
@@ -116,48 +125,76 @@ p{
 }
 
 .navbar-default .navbar-nav > li > a{
-  height: 100px;
-  line-height: 100px;
+  height: 80px;
+  line-height: 80px;
   padding: 0 15px;
   font-size: 16px;
   color: #fff;
+  transition: color .4s;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
   color: #1abc9c;
 }
 .navbar-toggle{
-  margin-top: 33px;
+  margin-top: 23px;
 }
 
-/* HERO */
+/************ HERO ************/
 .box-hero img{
   height: 250px;
 }
 
 .hero .box-hero h1{
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .hero .box-hero p{
   font-size: 20px;
 }
 
-/* PORTFOLIO */
+/************ PORTFOLIO ************/
 [class*="box-port-"] {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 400px;
   max-width: 100%;
   height: 290px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
+.box-layover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 188, 156, 0.7);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.box-layover i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+}
+
+.box-layover:hover{
+  opacity: 1;
+  cursor: pointer;
+}
 .portfolio{
   color: #2c3e50;
 }
 
-.portfolio .division .div-line{
+.portfolio .division::after,
+.portfolio .division::before{
   background: #2c3e50;
 }
 
@@ -166,29 +203,31 @@ p{
   object-fit: cover;
   height: 100%;
 }
-/* ABOUT */
+/************ ABOUT ************/
 .about p{
   font-size: 20px;
 }
 
-.about .col-md-4 p{
+.about .col-sm-4 p{
   padding: 0 10px;
   text-align: left;
 }
 
-/* CONTACT */
+.about .btn{
+  margin-top: 30px;
+  border-radius: 7px;
+  transition: color .4s, background .4s;
+}
+
+/************ CONTACT ************/
 .contact{
   color: #2c3e50;
   margin-bottom: 0;
 }
 
-.contact .division .div-line{
+.contact .division::after,
+.contact .division::before{
   background: #2c3e50;
-}
-
-label{
-  margin-bottom: 10px;
-  display: none;
 }
 
 .register-form .form-group input[type="email"],
@@ -199,17 +238,19 @@ label{
   color: #6c7591;
   border: 0;
   box-shadow: none;
-  border-bottom: 1px solid #eef1f3;
-  border-radius: none;
+  border-bottom: 1px solid #999999;
+  border-radius: 0;
   padding: 50px 0;
 }
 
 .register-form .form-group textarea{
   height: 200px;
+  padding-top: 35px;
 }
+
 .form-group .btn{
   padding: 15px 25px;
-  border-radius: 10px;
+  border-radius: 7px;
   color: #fff;
   border: 2px solid #1abc9c;
   margin-top: 10px;
@@ -218,15 +259,63 @@ label{
 .form-group .btn:hover{
   background: #2c9681;
   border: 2px solid #2c9681;
+  transition: background .4s;
 }
 
-/* FOOTER */
-.footer{
-  height:200px;
+/************ FOOTER ************/
+footer .row a{
+  color: #1abc9c;
+  transition: color .4s;
 }
 
-/* TABLET */
+footer .row a:hover{
+  color: #2c9681;
+}
+
+footer .container ul{
+  padding-left: 0;
+}
+
+.socials .inline{
+  display: inline-block;
+  list-style: none;
+  margin: 5px;
+}
+
+.socials .inline a i{
+  height: 55px;
+  width: 55px;
+  line-height: 52px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  transition: background .4s, color .4s;
+}
+
+.inline a i:hover{
+  color: #2c3e50;
+  background: #fff;
+}
+
+/************ BOTTOM-FOOTER ************/
+.bottom-footer{
+  background: #1a252f;
+  padding: 25px 0;
+}
+
+#small-font{
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+/************ TABLET ************/
 @media screen and (min-width: 768px){
+  .padd-top-bot{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   [class*="box-port-"]{
     width: 100%;
     height: 225px;
@@ -254,8 +343,13 @@ label{
   }
 }
 
-/* DESKTOP */
+/************ DESKTOP ************/
 @media screen and (min-width: 992px){
+  .padd-top-bot{
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
   [class*="box-port-"]{
     width: 100%;
     height: 240px;
@@ -264,6 +358,10 @@ label{
   .box-port-4,
   .box-port-5,
   .box-port-6{
+    margin-bottom: 0;
+  }
+
+  footer .row [class*="col-"]{
     margin-bottom: 0;
   }
 }
